@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 350">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="350" fill="#1a1a2e"/>
+  
+  <!-- Person -->
+  <circle cx="150" cy="120" r="60" fill="#2a2a4a"/>
+  <circle cx="150" cy="100" r="40" fill="url(#grad1)"/>
+  <ellipse cx="150" cy="200" rx="55" ry="70" fill="url(#grad1)"/>
+  
+  <!-- Eyes -->
+  <circle cx="135" cy="95" r="5" fill="white"/>
+  <circle cx="165" cy="95" r="5" fill="white"/>
+  <circle cx="136" cy="95" r="2" fill="#0f0f1a"/>
+  <circle cx="166" cy="95" r="2" fill="#0f0f1a"/>
+  
+  <!-- Smile -->
+  <path d="M130 110 Q150 125 170 110" fill="none" stroke="white" stroke-width="2"/>
+  
+  <!-- Name Bar -->
+  <rect x="50" y="290" width="200" height="50" fill="#2a2a4a" rx="8"/>
+  <text x="150" y="315" fill="white" font-size="16" font-weight="bold" text-anchor="middle">Ahmed Khan</text>
+  <text x="150" y="332" fill="#7c3aed" font-size="12" text-anchor="middle">SEO Specialist</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="50" cy="50" r="48" fill="#1a1a2e"/>
+  <circle cx="50" cy="40" r="20" fill="url(#grad1)"/>
+  <ellipse cx="50" cy="80" rx="28" ry="18" fill="url(#grad1)"/>
+  
+  <circle cx="43" cy="37" r="3" fill="white"/>
+  <circle cx="57" cy="37" r="3" fill="white"/>
+  
+  <!-- Glasses -->
+  <circle cx="43" cy="37" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+  <circle cx="57" cy="37" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+  <line x1="51" y1="37" x2="49" y2="37" stroke="white" stroke-width="1.5"/>
+  
+  <path d="M40 48 Q50 56 60 48" fill="none" stroke="white" stroke-width="2"/>
+</svg>

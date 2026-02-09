@@ -1,0 +1,11 @@
+{
+    "name": "lahore-seo-clone",
+    "version": "1.0.0",
+    "description": "Clone of Lahore SEO Services website",
+    "scripts": {
+        "start": "serve ."
+    },
+    "dependencies": {
+        "serve": "^14.2.1"
+    }
+}

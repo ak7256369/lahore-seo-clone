@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="#1a1a2e"/>
+  
+  <!-- SEO vs Ads comparison -->
+  <rect x="50" y="40" width="130" height="150" rx="10" fill="#0f0f1a" stroke="url(#grad1)" stroke-width="2"/>
+  <text x="85" y="70" fill="url(#grad1)" font-size="16" font-weight="bold">SEO</text>
+  <rect x="70" y="85" width="90" height="8" rx="4" fill="url(#grad1)"/>
+  <rect x="70" y="105" width="60" height="6" rx="3" fill="#3a3a5a"/>
+  <rect x="70" y="120" width="80" height="6" rx="3" fill="#3a3a5a"/>
+  <circle cx="115" cy="160" r="20" fill="url(#grad1)" opacity="0.3"/>
+  <text x="105" y="166" fill="white" font-size="14">✓</text>
+  
+  <rect x="220" y="40" width="130" height="150" rx="10" fill="#0f0f1a" stroke="#ec4899" stroke-width="2"/>
+  <text x="255" y="70" fill="#ec4899" font-size="16" font-weight="bold">ADS</text>
+  <rect x="240" y="85" width="90" height="8" rx="4" fill="#ec4899"/>
+  <rect x="240" y="105" width="70" height="6" rx="3" fill="#3a3a5a"/>
+  <rect x="240" y="120" width="85" height="6" rx="3" fill="#3a3a5a"/>
+  <circle cx="285" cy="160" r="20" fill="#ec4899" opacity="0.3"/>
+  <text x="275" y="166" fill="white" font-size="14">$</text>
+  
+  <!-- VS badge -->
+  <circle cx="200" cy="115" r="25" fill="#1a1a2e" stroke="url(#grad1)" stroke-width="2"/>
+  <text x="185" y="122" fill="white" font-size="14" font-weight="bold">VS</text>
+  
+  <!-- Bottom text -->
+  <rect x="100" y="210" width="200" height="10" rx="5" fill="#3a3a5a"/>
+  <rect x="130" y="230" width="140" height="6" rx="3" fill="#2a2a4a"/>
+</svg>

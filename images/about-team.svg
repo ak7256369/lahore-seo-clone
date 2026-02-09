@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="#1a1a2e" rx="15"/>
+  
+  <!-- Team Members Silhouettes -->
+  <!-- Person 1 -->
+  <circle cx="150" cy="180" r="45" fill="#2a2a4a"/>
+  <circle cx="150" cy="165" r="25" fill="url(#grad1)"/>
+  <ellipse cx="150" cy="210" rx="35" ry="25" fill="url(#grad1)"/>
+  
+  <!-- Person 2 (Center) -->
+  <circle cx="250" cy="160" r="50" fill="#2a2a4a"/>
+  <circle cx="250" cy="140" r="30" fill="url(#grad1)"/>
+  <ellipse cx="250" cy="195" rx="40" ry="30" fill="url(#grad1)"/>
+  
+  <!-- Person 3 -->
+  <circle cx="350" cy="180" r="45" fill="#2a2a4a"/>
+  <circle cx="350" cy="165" r="25" fill="url(#grad1)"/>
+  <ellipse cx="350" cy="210" rx="35" ry="25" fill="url(#grad1)"/>
+  
+  <!-- Desk/Table -->
+  <rect x="80" y="250" width="340" height="15" rx="5" fill="#3a3a5a"/>
+  <rect x="100" y="265" width="300" height="80" rx="5" fill="#2a2a4a"/>
+  
+  <!-- Laptops -->
+  <rect x="120" y="275" width="50" height="35" rx="3" fill="#0f0f1a" stroke="url(#grad1)" stroke-width="1"/>
+  <rect x="220" y="275" width="60" height="40" rx="3" fill="#0f0f1a" stroke="url(#grad1)" stroke-width="1"/>
+  <rect x="320" y="275" width="50" height="35" rx="3" fill="#0f0f1a" stroke="url(#grad1)" stroke-width="1"/>
+  
+  <!-- Floating Icons -->
+  <circle cx="100" cy="120" r="20" fill="url(#grad1)" opacity="0.8"/>
+  <text x="93" y="127" fill="white" font-size="16">📊</text>
+  
+  <circle cx="400" cy="100" r="18" fill="#06b6d4" opacity="0.8"/>
+  <text x="393" y="107" fill="white" font-size="14">🎯</text>
+  
+  <circle cx="420" cy="220" r="15" fill="#ec4899" opacity="0.8"/>
+  <text x="413" y="226" fill="white" font-size="12">✨</text>
+  
+  <!-- Connection lines -->
+  <line x1="150" y1="140" x2="220" y2="140" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="5"/>
+  <line x1="280" y1="140" x2="350" y2="140" stroke="url(#grad1)" stroke-width="2" stroke-dasharray="5"/>
+</svg>
