@@ -908,6 +908,13 @@ textarea {
     font-weight: 600;
 }
 
+.plan-price .amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
 .plan-price .price-text {
     color: var(--text-secondary);
     font-size: 14px;
@@ -1280,11 +1287,16 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
 .project-title {
     font-size: 20px;
     margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
 .project-link {

@@ -530,4 +530,4 @@ function initCursorTrail() {
 // Uncomment to enable cursor trail
 // initCursorTrail();
 
-console.log('Lahore SEO Services Clone - Loaded Successfully!');
+console.log('FJP SEO Services Clone - Loaded Successfully!');
