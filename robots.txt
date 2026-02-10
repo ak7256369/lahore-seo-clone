@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fjpseoservices.com/sitemap.xml
