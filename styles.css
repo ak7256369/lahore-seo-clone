@@ -2185,6 +2185,31 @@ textarea {
     }
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed !important;
+    width: 60px;
+    height: 60px;
+    bottom: 100px !important;
+    right: 30px !important;
+    background-color: #25d366 !important;
+    color: #FFF !important;
+    border-radius: 50% !important;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 10000 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
 /* ===== SMOOTH SCROLL REVEAL ===== */
 [data-aos] {
     transition-property: transform, opacity;
