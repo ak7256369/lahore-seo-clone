@@ -23,8 +23,4 @@
   <!-- Smile -->
   <path d="M130 110 Q150 125 170 110" fill="none" stroke="white" stroke-width="2"/>
   
-  <!-- Name Bar -->
-  <rect x="50" y="290" width="200" height="50" fill="#2a2a4a" rx="8"/>
-  <text x="150" y="315" fill="white" font-size="16" font-weight="bold" text-anchor="middle">Ahmed Khan</text>
-  <text x="150" y="332" fill="#7c3aed" font-size="12" text-anchor="middle">SEO Specialist</text>
 </svg>
