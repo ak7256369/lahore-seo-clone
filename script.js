@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             disable: 'mobile'
         });
     }
-    
+
     // Initialize all functions
     initMobileMenu();
     initScrollEvents();
@@ -70,10 +70,10 @@ function initMobileMenu() {
 // ===== SCROLL EVENTS =====
 function initScrollEvents() {
     let lastScroll = 0;
-    
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+
         // Header background on scroll
         if (header) {
             if (currentScroll > 50) {
@@ -82,7 +82,7 @@ function initScrollEvents() {
                 header.classList.remove('scrolled');
             }
         }
-        
+
         // Back to top button visibility
         if (backToTop) {
             if (currentScroll > 500) {
@@ -91,13 +91,13 @@ function initScrollEvents() {
                 backToTop.classList.remove('visible');
             }
         }
-        
+
         // Active nav link based on section
         updateActiveNavLink();
-        
+
         lastScroll = currentScroll;
     });
-    
+
     // Back to top click
     if (backToTop) {
         backToTop.addEventListener('click', () => {
@@ -113,12 +113,12 @@ function initScrollEvents() {
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const scrollPosition = window.scrollY + 100;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -133,7 +133,7 @@ function updateActiveNavLink() {
 // ===== SMOOTH SCROLL =====
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -157,7 +157,7 @@ function initFAQ() {
                         otherItem.classList.remove('active');
                     }
                 });
-                
+
                 // Toggle current item
                 item.classList.toggle('active');
             });
@@ -175,17 +175,17 @@ function initTestimonials() {
                 card.classList.add('active');
             }
         });
-        
+
         testimonialDots.forEach((dot, i) => {
             dot.classList.remove('active');
             if (i === index) {
                 dot.classList.add('active');
             }
         });
-        
+
         currentTestimonialIndex = index;
     }
-    
+
     // Next button
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
@@ -196,7 +196,7 @@ function initTestimonials() {
             showTestimonial(nextIndex);
         });
     }
-    
+
     // Previous button
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
@@ -207,14 +207,14 @@ function initTestimonials() {
             showTestimonial(prevIndex);
         });
     }
-    
+
     // Dots navigation
     testimonialDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             showTestimonial(index);
         });
     });
-    
+
     // Auto-play testimonials
     setInterval(() => {
         let nextIndex = currentTestimonialIndex + 1;
@@ -232,7 +232,7 @@ function initCounterAnimation() {
         const duration = 2000;
         const step = target / (duration / 16);
         let current = 0;
-        
+
         const updateCounter = () => {
             current += step;
             if (current < target) {
@@ -242,16 +242,16 @@ function initCounterAnimation() {
                 element.textContent = target;
             }
         };
-        
+
         updateCounter();
     };
-    
+
     // Intersection Observer for counter animation
     const observerOptions = {
         threshold: 0.5,
         rootMargin: '0px'
     };
-    
+
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -260,7 +260,7 @@ function initCounterAnimation() {
             }
         });
     }, observerOptions);
-    
+
     statNumbers.forEach(number => {
         counterObserver.observe(number);
     });
@@ -271,14 +271,14 @@ function initContactForm() {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData.entries());
-            
+
             // Simple form validation
             let isValid = true;
             const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
-            
+
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
@@ -287,7 +287,7 @@ function initContactForm() {
                     input.style.borderColor = '';
                 }
             });
-            
+
             // Email validation
             const emailInput = contactForm.querySelector('input[type="email"]');
             if (emailInput && emailInput.value) {
@@ -297,7 +297,7 @@ function initContactForm() {
                     emailInput.style.borderColor = '#ef4444';
                 }
             }
-            
+
             if (isValid) {
                 // Show success message (in real app, you'd send to server)
                 showNotification('Message sent successfully! We will get back to you soon.', 'success');
@@ -306,7 +306,7 @@ function initContactForm() {
                 showNotification('Please fill in all required fields correctly.', 'error');
             }
         });
-        
+
         // Clear error styling on input
         const inputs = contactForm.querySelectorAll('input, textarea');
         inputs.forEach(input => {
@@ -324,7 +324,7 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -332,7 +332,7 @@ function showNotification(message, type = 'info') {
         <span>${message}</span>
         <button class="notification-close">&times;</button>
     `;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -349,7 +349,7 @@ function showNotification(message, type = 'info') {
         animation: slideIn 0.3s ease;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     `;
-    
+
     // Add animation keyframes
     if (!document.querySelector('#notification-styles')) {
         const style = document.createElement('style');
@@ -387,16 +387,16 @@ function showNotification(message, type = 'info') {
         `;
         document.head.appendChild(style);
     }
-    
+
     document.body.appendChild(notification);
-    
+
     // Close button functionality
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.style.animation = 'slideOut 0.3s ease forwards';
         setTimeout(() => notification.remove(), 300);
     });
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
@@ -410,7 +410,7 @@ function showNotification(message, type = 'info') {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroImage = document.querySelector('.hero-image-wrapper');
-    
+
     if (heroImage && scrolled < window.innerHeight) {
         heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
@@ -420,7 +420,7 @@ window.addEventListener('scroll', () => {
 function typeWriter(element, text, speed = 50) {
     let i = 0;
     element.textContent = '';
-    
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -428,7 +428,7 @@ function typeWriter(element, text, speed = 50) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
@@ -438,10 +438,10 @@ document.querySelectorAll('.btn-primary').forEach(button => {
         const rect = button.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
-        
+
         button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
     });
-    
+
     button.addEventListener('mouseleave', () => {
         button.style.transform = '';
     });
@@ -453,16 +453,16 @@ document.querySelectorAll('.service-card, .pricing-card, .team-card').forEach(ca
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 10;
         const rotateY = (centerX - x) / 10;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = '';
     });
@@ -474,7 +474,7 @@ if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const emailInput = newsletterForm.querySelector('input[type="email"]');
-        
+
         if (emailInput && emailInput.value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (emailRegex.test(emailInput.value)) {
@@ -490,7 +490,7 @@ if (newsletterForm) {
 // ===== LAZY LOADING FOR IMAGES =====
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -501,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 });
 
@@ -520,7 +520,7 @@ function initCursorTrail() {
         transition: transform 0.1s ease;
     `;
     document.body.appendChild(trail);
-    
+
     document.addEventListener('mousemove', (e) => {
         trail.style.left = e.clientX - 10 + 'px';
         trail.style.top = e.clientY - 10 + 'px';
@@ -529,5 +529,39 @@ function initCursorTrail() {
 
 // Uncomment to enable cursor trail
 // initCursorTrail();
+
+// ===== SEE MORE SERVICES =====
+document.addEventListener('DOMContentLoaded', () => {
+    const seeMoreBtn = document.getElementById('seeMoreBtn');
+    const hiddenServices = document.querySelectorAll('.hidden-service');
+    
+    if (seeMoreBtn && hiddenServices.length > 0) {
+        let isExpanded = false;
+        
+        seeMoreBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            
+            if (isExpanded) {
+                hiddenServices.forEach(service => {
+                    service.style.display = 'block';
+                    // Trigger AOS animation if available
+                    service.classList.add('aos-animate');
+                });
+                seeMoreBtn.textContent = 'See Less';
+            } else {
+                hiddenServices.forEach(service => {
+                    service.style.display = 'none';
+                });
+                seeMoreBtn.textContent = 'See More';
+                
+                // Scroll back to services section top smoothly
+                const servicesSection = document.getElementById('services');
+                if (servicesSection) {
+                    servicesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
+});
 
 console.log('FJP SEO Services Clone - Loaded Successfully!');

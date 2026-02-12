@@ -2214,3 +2214,15 @@ textarea {
 [data-aos] {
     transition-property: transform, opacity;
 }
+
+/* ===== HIDDEN SERVICES ===== */
+.hidden-service {
+    display: none;
+}
+
+.services-cta-more {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
