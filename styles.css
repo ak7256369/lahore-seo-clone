@@ -2217,12 +2217,14 @@ textarea {
 
 /* ===== HIDDEN SERVICES ===== */
 .hidden-service {
-    display: none;
+    display: none !important;
 }
 
 .services-cta-more {
+    width: 100%;
     text-align: center;
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }

@@ -534,26 +534,26 @@ function initCursorTrail() {
 document.addEventListener('DOMContentLoaded', () => {
     const seeMoreBtn = document.getElementById('seeMoreBtn');
     const hiddenServices = document.querySelectorAll('.hidden-service');
-    
+
     if (seeMoreBtn && hiddenServices.length > 0) {
         let isExpanded = false;
-        
+
         seeMoreBtn.addEventListener('click', () => {
             isExpanded = !isExpanded;
-            
+
             if (isExpanded) {
                 hiddenServices.forEach(service => {
-                    service.style.display = 'block';
+                    service.style.setProperty('display', 'block', 'important');
                     // Trigger AOS animation if available
                     service.classList.add('aos-animate');
                 });
                 seeMoreBtn.textContent = 'See Less';
             } else {
                 hiddenServices.forEach(service => {
-                    service.style.display = 'none';
+                    service.style.setProperty('display', 'none', 'important');
                 });
                 seeMoreBtn.textContent = 'See More';
-                
+
                 // Scroll back to services section top smoothly
                 const servicesSection = document.getElementById('services');
                 if (servicesSection) {
