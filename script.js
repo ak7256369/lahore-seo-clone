@@ -564,38 +564,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ===== SEE MORE BLOGS =====
-document.addEventListener('DOMContentLoaded', () => {
-    const viewMoreBlogsBtn = document.getElementById('viewMoreBlogsBtn');
-    const hiddenBlogs = document.querySelectorAll('.hidden-blog'); // Use a different class for blogs if needed, or reuse logic
-
-    if (viewMoreBlogsBtn && hiddenBlogs.length > 0) {
-        let isExpanded = false;
-
-        viewMoreBlogsBtn.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-
-            if (isExpanded) {
-                hiddenBlogs.forEach(blog => {
-                    blog.style.setProperty('display', 'block', 'important');
-                    // Trigger AOS animation if available
-                    blog.classList.add('aos-animate');
-                });
-                viewMoreBlogsBtn.textContent = 'View Less';
-            } else {
-                hiddenBlogs.forEach(blog => {
-                    blog.style.setProperty('display', 'none', 'important');
-                });
-                viewMoreBlogsBtn.textContent = 'View More';
-
-                // Scroll back to blog section top smoothly
-                const blogSection = document.getElementById('blog');
-                if (blogSection) {
-                    blogSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    }
-});
-
 console.log('FJP SEO Services Clone - Loaded Successfully!');
